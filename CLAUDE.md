@@ -28,10 +28,10 @@
 ## ❷ 基本設定
 
 ### 会社情報
-- 社名: **株式会社RAPiS** / オーナー（社長）: ユーザー
+- 社名: **[会社名をここに記入]** / オーナー（社長）: ユーザー
 
 ### ファイル出力先
-- 生成したファイルは、特に指示がない限り `/Users/rapis_muguruma/.claude/downloads/` に保存する
+- 生成したファイルは、特に指示がない限り `~/.claude/downloads/` に保存する
 
 ### 技術前提
 - Google Apps Script (GAS) に精通している前提で応答（clasp / V8ランタイム / SpreadsheetApp 等）
