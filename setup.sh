@@ -41,9 +41,14 @@ done
 
 # skills/ ダウンロード
 echo "📄 スキルをダウンロード中..."
-mkdir -p "$CLAUDE_DIR/skills/競馬"
-curl -s "$REPO/skills/%E7%AB%B6%E9%A6%AC/SKILL.md" -o "$CLAUDE_DIR/skills/競馬/SKILL.md"
-echo "  ✅ 競馬/SKILL.md"
+# スキル名（URLエンコード済み:プレーン名）の形式で列挙
+for entry in "%E7%AB%B6%E9%A6%AC:競馬"; do
+  encoded="${entry%%:*}"
+  plain="${entry##*:}"
+  mkdir -p "$CLAUDE_DIR/skills/${plain}"
+  curl -s "$REPO/skills/${encoded}/SKILL.md" -o "$CLAUDE_DIR/skills/${plain}/SKILL.md"
+  echo "  ✅ ${plain}/SKILL.md"
+done
 
 echo ""
 echo "======================================"
