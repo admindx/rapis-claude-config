@@ -39,6 +39,12 @@ for file in ceo-luffy coo-zoro design-robin dx-franky hr-usopp marketing-nami mq
   echo "  ✅ ${file}.md"
 done
 
+# skills/ ダウンロード
+echo "📄 スキルをダウンロード中..."
+mkdir -p "$CLAUDE_DIR/skills/競馬"
+curl -s "$REPO/skills/%E7%AB%B6%E9%A6%AC/SKILL.md" -o "$CLAUDE_DIR/skills/競馬/SKILL.md"
+echo "  ✅ 競馬/SKILL.md"
+
 echo ""
 echo "======================================"
 echo "  ✅ セットアップ完了！"
